@@ -14,7 +14,9 @@
 
 %2-stages IMEX-RK methods
 
-%1)IMEX-H(2,2,2) 
+function [tA,A,tb,b] = function(scheme)
+switch scheme
+case 1 %IMEX-H(2,2,2) 
 tA = [0 0;
       1 0];
 tb = [1/2; 1/2];
@@ -24,7 +26,7 @@ A = [1/2 0;
 
 b = tb;
 
-%2) IMEX-SSP2(2,2,2)
+case 2 %IMEX-SSP2(2,2,2)
 
 g = 1-1/sqrt(2);
 
@@ -38,7 +40,7 @@ A = [d 0;
 
 b = tb;
 
-%2) IMEX-SA(2,2,2)
+case 3  %IMEX-SA(2,2,2)
 
 g = 1-1/sqrt(2);
 
@@ -55,4 +57,5 @@ b = tb;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Type II IMEX-RK methods, matrix A of the implicit part is not invertible
 
+end
 
