@@ -14,7 +14,7 @@
 
 %2-stages IMEX-RK methods
 
-function [tA,A,tb,b] = function(scheme)
+function [tA,A,tb,b] = IMEX_RK_2(scheme)
 
 switch scheme
 
