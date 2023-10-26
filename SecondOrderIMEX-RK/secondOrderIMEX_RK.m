@@ -15,7 +15,9 @@
 %2-stages IMEX-RK methods
 
 function [tA,A,tb,b] = function(scheme)
+
 switch scheme
+
 case 1 %IMEX-H(2,2,2) 
 tA = [0 0;
       1 0];
