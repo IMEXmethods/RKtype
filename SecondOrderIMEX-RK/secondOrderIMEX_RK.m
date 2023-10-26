@@ -58,6 +58,17 @@ b = tb;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Type II IMEX-RK methods, matrix A of the implicit part is not invertible
+case 4  %H-T(2,2,2)
+disp('This scheme is A-Stable but not L-Stable, not suitable for strong stiff problem, see book')
+tA = [0 0;
+      1 0];
+
+tb = [1/2; 1/2];
+
+A = [0 0;
+     1/2   1/2];
+
+b = tb;
 
 end
 
